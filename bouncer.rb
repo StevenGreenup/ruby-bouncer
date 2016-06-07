@@ -29,7 +29,7 @@ puts "Where are you from? (U)sa or U(K)"
       age_usa = gets.chomp.to_i
       check_age_usa(age_usa)
   elsif where == "K"
-    puts "How old are you? AA"
+    puts "How old are you?"
     age_uk = gets.chomp.to_i
       if age_uk < 16
         puts "You're old enough to do literally nothing."
