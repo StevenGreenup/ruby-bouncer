@@ -18,28 +18,30 @@ end
 
 keep_asking= true
 while keep_asking == true do
-  print ("Do you want find out what you can do at your age in your country? (Y)es or (N)o   >")
+  puts ("Do you want find out what you can do at your age in your country? (Y)es or (N)o")
     answer =gets.chomp.upcase
     keep_asking = false if answer == "N"
     if answer == "Y"
-print "Where are you from? (U)sa or U(K)   >"
+puts "Where are you from? (U)sa or U(K)"
   where = gets.chomp.upcase
   if where == "U"
-    print "How old are you? BB   > "
+    puts "How old are you?"
       age_usa = gets.chomp.to_i
       check_age_usa(age_usa)
   elsif where == "K"
-    print "How old are you? AA  > "
+    puts "How old are you? AA"
     age_uk = gets.chomp.to_i
-      if age_uk > 18
+      if age_uk < 16
+        puts "You're old enough to do literally nothing."
+      elsif age_uk >= 18
       check_age_uk(age_uk)
       elsif (age_uk >= 16 && age_uk < 18)
-        print "Is a legal guardian with you? (Y)es or (N)o   >"
+        puts "Is a legal guardian with you? (Y)es or (N)o"
         who = gets.chomp.upcase
         if who == "Y"
-          print "YOU CAN DRINK!!!"
+          puts "YOU CAN DRINK!!!"
           elsif who == "N"
-            print "Go get your guardian, and you can drink."
+            puts "Go get your guardian, and you can drink."
 
 
       end
